@@ -24,7 +24,7 @@ places, também do Google Mapas.
 
 ## Stack utilizada
 
-**Front-end:** HTML, CSS, Javascript
+**Front-end:** HTML5, CSS3, Javascript
 
 **Back-end:** Javascript
 
