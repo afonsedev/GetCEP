@@ -1,0 +1,190 @@
+/*       * @license  * Copyright 2019 Google LLC. All Rights Reserved. * SPDX-License-Identifier: Apache-2.0
+         * Always set the map height explicitly to define the size of the div element
+         * that contains the map. 
+*/
+
+html,
+body {
+  /* height: 100%;
+  margin: 0;*/
+  height: 100%;
+
+  padding: 0 0 0 3rem;
+  margin: 0;
+
+  background-position: center;
+  background-position-x: 45rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/background.png);
+  background-color: #0d1116;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.botao-voltar img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 2rem;
+  left: -5rem;
+
+  transition-duration: 1s;
+  transform-origin: 0% 0%;
+}
+
+.botao-voltar img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: monospace;
+  width: 15ch;
+  /* border-right: 1rem solid; */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(15), blinking 0.5s infinite step-end alternate;
+  color: #6800ca;
+
+  padding: 2rem 0 0 0;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  width: 72ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 9s steps(72), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+* {
+  font-family: monospace;
+}
+
+#map {
+  /* height: 40%;
+  width: 30%; */
+
+  position: relative;
+  top: 3rem;
+  /* left: 5rem; */
+  overflow: hidden;
+  height: 28rem;
+  width: 50rem;
+  border-radius: 2rem;
+  margin-bottom: 50px;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  /* font: 400 18px Roboto, Arial, sans-serif; */
+  overflow: hidden;
+  /* font-family: Roboto; */
+  padding: 0;
+  width: 20rem;
+  height: 5rem;
+  /* box-shadow: 20px 20px 33px #ffffff, -20px -20px 33px #999999; */
+  border-radius: 1rem;
+}
+
+#pac-container {
+  width: 2rem;
+  margin-right: 12px;
+  position: relative;
+  top: -2rem;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  /* font-family: Roboto; */
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  /* font-family: Roboto; */
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 1.5rem 0 0 0;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  width: 10rem;
+  border: thin;
+  outline: none;
+}
+
+/* #pac-input:focus {
+  border-color: #4d90fe;
+} */
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+.gm-style .gm-style-iw-d {
+  width: 18rem;
+}
+
+.botao-voltar {
+  background-color: transparent;
+  border: thin;
+}

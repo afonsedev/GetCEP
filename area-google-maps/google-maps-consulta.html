@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+
+    <title>GetCep</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/jpg" href="../images/brasil-icon.png"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+  </head>
+
+  <body>
+    <main>
+        <button class="botao-voltar">
+          <a href="../index.html">
+            <img src="../images/home.png" href="../index.html" />
+          </a>
+        </button>
+        <h1>API Google Maps</h1>
+        <h2>Cole seu endereço aqui <br> e confira as informações com a API do Google Maps
+        </h2>
+
+        <div class="pac-card" id="pac-card">
+          <div>
+            <!-- <div id="title">Autocomplete search</div> -->
+            <div id="type-selector" class="pac-controls"></div>
+            <br />
+            <div id="strict-bounds-selector" class="pac-controls"></div>
+          </div>
+          <div id="pac-container">
+            <input id="pac-input" type="text" placeholder="Cole o endereço aqui" />
+          </div>
+        </div>
+        <div id="map"></div>
+        <div id="infowindow-content">
+          <span id="place-name" class="title"></span><br />
+          <span id="place-address"></span>
+        </div>
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV572WR2sKM8ruo3Cfrrk4lUHFsA-THwg&callback=initMap&libraries=places&v=weekly&solution_channel=GMP_CCS_autocomplete_v1"
+          defer
+        ></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace; /*"Montserrat", sans-serif;*/
+  font-weight: 700;
+  color: white;
+}
+
+body {
+  /* background-color: #111111; */
+  background-position: center;
+  background-position-x: 45rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(images/background.png);
+  background-color: #0d1116;
+
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */ /* height: 10px; */
+}
+
+body::-webkit-scrollbar-track {
+  /*background: orange;         color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6800ca; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+
+h1,
+h2 {
+  color: #6800ca;
+}
+
+h1 {
+  font-size: 10rem;
+  font-family: monospace;
+  width: 9ch;
+  border-right: 1rem solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(8), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h2 {
+  width: 18ch;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#label-cep {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.content {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 15rem 0rem 0rem 0rem;
+  margin-bottom: 15%;
+  width: 60rem;
+  height: 30rem;
+  /* border-radius: 1rem; */
+  /* padding-left: -8rem; */
+  justify-content: center;
+}
+
+.card-consulta {
+  display: flex;
+  flex-direction: column;
+  /* margin: auto; */
+}
+
+.input-cep {
+  display: flex;
+  align-items: center;
+}
+
+.botao-google-maps {
+  border: thin;
+  background-color: transparent;
+  width: 1.5rem;
+  height: 2rem;
+  transition-duration: 2s;
+  transform-origin: 0% 0%;
+  margin-left: 5px;
+}
+
+.botao-copia {
+  background-color: transparent;
+  border: thin;
+  margin-right: 15%;
+}
+
+.popup,
+.popup-botao-copiar {
+  display: none;
+  position: absolute;
+  background-color: #40004d;
+  color: white;
+  border: thin;
+  border-radius: 5%;
+  padding: 5px;
+  width: 5rem;
+  font-size: 10px;
+  font-weight: bold;
+  top: -3rem; /* Posiciona o pop-up acima do botão */
+  left: 50%; /* Posiciona o pop-up no centro horizontal do botão */
+  transform: translateX(-50%); /* Alinha o pop-up horizontalmente com o botão */
+  animation: fadeInAnimation ease 1s;
+}
+
+.botao-google-maps img {
+  width: 2rem;
+  height: 2.5rem;
+}
+
+#pai {
+  border-radius: 15px;
+  background-color: #181818;
+  padding: 2rem 0rem 2rem 0px;
+  /* position: relative;
+  top: 26rem; */
+
+  animation: fadeInAnimation ease 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  /* font-size: px; */
+}
+
+.titulo-subtitulo {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-bottom: 5%;
+}
+
+.areaInputsGeral {
+  height: 30%;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.subgrupo {
+  display: flex;
+}
+
+#area-cep {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+  background-color: #181818;
+  border-radius: 1rem;
+  height: 7rem;
+  padding-bottom: 2%;
+
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#area-cep,
+#pai {
+  width: 55rem;
+}
+
+#label-cep {
+  padding-right: 2%;
+}
+
+#cep {
+  border-radius: 8px;
+  background: #2b2b2b;
+  height: 3rem;
+  width: 11rem;
+  padding-left: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 2%;
+}
+
+#botao-pesquisacep {
+  border-radius: 9px;
+  border: thin;
+  background-color: #6800ca;
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  /* margin: 0px 5% 0px 12%; */
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition-duration: 1s;
+  transform-origin: 0% 0%;
+}
+
+#botao-pesquisacep:hover,
+.icon-copiar:hover,
+.botao-google-maps:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.botoes-copia-googlemaps {
+  display: flex;
+  /* align-items: center; */
+  margin-left: -3%;
+}
+
+.botao-google-maps,
+.icon-copiar {
+  margin: 5%;
+}
+
+/* #estado {
+  position: absolute;
+  left: 3.5rem;
+} */
+
+#cidade {
+  width: 18.5rem;
+}
+
+.areaInput {
+  padding: 15px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.areaInputsGeral input {
+  border-radius: 6px;
+  padding-left: 5%;
+}
+
+#bairro-div,
+#estado {
+  padding-left: 25%;
+}
+
+input {
+  border-radius: 5px;
+  border: thin;
+  background: #2b2b2b;
+  margin-left: 5%;
+  width: 20rem;
+  height: 2.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 0;
+}
+
+.botoes {
+  position: absolute;
+  left: 10%;
+  top: 36rem;
+  justify-content: space-around;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: blue;
+}
+
+.icon-copiar,
+.icon-refresh {
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  transition-duration: 1s;
+  transform-origin: 0% 0%;
+  /* position: relative;
+  top: -2rem;
+  left: 35rem; */
+  --lord-icon-primary: white; /* Change this to the desired color */
+}
+
+#aviso-sucesso {
+  display: none;
+  color: white;
+  background-color: #6800ca;
+  font-size: 15px;
+  width: 17rem;
+  padding: 0 0 0 12px;
+  height: 3rem;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 48rem;
+  left: 0rem;
+
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  animation: fadeOutAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  100% {
+    opacity: 0%;
+    display: none;
+  }
+}
