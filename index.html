@@ -18,14 +18,14 @@
 
 <body>
     <main class="content">
-        <div class="titulo-subtitulo">
-              <h1 class="titulo">Get<span>CEP()</h1>     
-              <h2 class="subtitulo">Localize-se!</h2>
-        </div>
+        <section class="titulo-subtitulo">
+              <span class="titulo">Get<span>CEP()</span> </span>    
+              <span class="subtitulo">Localize-se!</span>
+        </section>
 
 
-        <section class="card-consulta">
-            <div class="areaInput" id="area-cep">
+        <div class="card-consulta">
+            <section class="areaInput" id="area-cep">
 
                   <section class="input-cep">
                         <label id="label-cep">CEP</label>
@@ -39,64 +39,69 @@
                 
 
                   <section class="botoes-copia-googlemaps">
-                    <button class="botao-copia">
-                        <img src="images/prancheta.png" trigger="hover" class="icon-copiar" id="botao-copiar" onclick="copia_cep()"> 
-                        <!-- <div class="popup">Acesse seu endereço com o Maps</div>       -->
-                    </button>    
+                      <button class="botao-copia">
+                          <img src="images/prancheta.png" trigger="hover" class="icon-copiar" id="botao-copiar" onclick="copia_cep()"> 
+                          <!-- <div class="popup">Acesse seu endereço com o Maps</div>       -->
+                      </button>    
 
-                    <button class="botao-google-maps">
-                      <a href="area-google-maps/google-maps-consulta.html">
-                        <img src="images/google-maps.png" alt="Descrição da imagem">
-                        <div class="popup">Acesse seu endereço com o Maps</div>
-                      </a>
-                    </button>
+                      <button class="botao-google-maps">
+                        <a href="area-google-maps/google-maps-consulta.html">
+                          <img src="images/google-maps.png" alt="Descrição da imagem">
+                          <div class="popup">Acesse seu endereço com o Maps</div>
+                        </a>
+                      </button>
                   </section>
-            </div>
-        </section>
+            </section>
+        </div>
 
 
-      <div id="pai">
-          <div class="areaInputsGeral">
+      <div id="elemento-pai">
+          <!-- <section class="areaInputsGeral"> -->
             <form method="get" action=".">
 
-              <div class="subgrupo">
-                    <article class="areaInput">
-                      <label>Rua</label>
-                      <input name="rua" type="text" id="rua" size="60" readonly/>
-                      
-                      <!-- <img src="images/prancheta.png" -->
-                    </article>
+                <!-- <div class="subgrupo"> -->
+                      <article class="areaInput">
+                        <label>Rua</label>
+                        <input name="rua" type="text" id="rua" size="60" readonly/>
+                        
+                        <!-- <img src="images/prancheta.png" -->
+                      </article>
 
-                    <article class="areaInput" id="bairro-div">
-                      <label>Bairro</label>
-                      <input name="bairro" type="text" id="bairro" size="40" readonly/>
-                    </article>
-              </div>
+                      <article class="areaInput" id="bairro-div">
+                        <label>Bairro</label>
+                        <input name="bairro" type="text" id="bairro" size="40" readonly/>
+                      </article>
+                <!-- </div> -->
 
 
-              <div class="subgrupo">
-                    <article class="areaInput">
-                      <label>Cidade</label>
-                      <input name="cidade" type="text" id="cidade" size="40" readonly/>
-                    </article>
+                <!-- <div class="subgrupo"> -->
+                      <article class="areaInput">
+                        <label>Cidade</label>
+                        <input name="cidade" type="text" id="cidade" size="40" readonly/>
+                      </article>
 
-                    <article class="areaInput" id="estado">
-                      <label>Estado</label>
-                      <input name="uf" type="text" id="uf" size="2" readonly/>
-                    </article>
-              </div>
+                      <article class="areaInput" id="estado">
+                        <label>Estado</label>
+                        <input name="uf" type="text" id="uf" size="2" readonly/>
+                      </article>
+                <!-- </div> -->
 
-                <article class="areaInput">
-                  <label>IBGE</label>
-                  <input name="ibge" type="text" id="ibge" size="8" readonly/>
-                </article>  
-          </div>
+                  <article class="areaInput">
+                    <label>IBGE</label>
+                    <input name="ibge" type="text" id="ibge" size="8" readonly/>
+                  </article>  
+
+            </form>
+        </div>
       </div> 
 
+      <br>
 
       <div id="aviso-sucesso">
         <span>CEP consultado com sucesso!</span>
       </div>
+
+
 
                                       
       </main>
