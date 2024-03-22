@@ -3,7 +3,6 @@
          * that contains the map. 
 */
 
-html,
 body {
   /* height: 100%;
   margin: 0;*/
@@ -38,7 +37,7 @@ body {
   height: 50px;
   position: relative;
   top: 2rem;
-  left: -5rem;
+  left: -2rem;
 
   transition-duration: 1s;
   transform-origin: 0% 0%;
@@ -50,7 +49,7 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: monospace;
   width: 15ch;
   /* border-right: 1rem solid; */
@@ -63,7 +62,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+p {
   color: white;
   width: 72ch;
   white-space: nowrap;
@@ -187,4 +186,55 @@ h2 {
 .botao-voltar {
   background-color: transparent;
   border: thin;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Estilos para dispositivos com largura de tela de até 767px (geralmente dispositivos móveis em modo retrato) */
+  body {
+    padding: 0rem 3rem 0rem 3rem;
+  }
+
+  .botao-voltar {
+    position: relative;
+    left: -1rem;
+    top: -1rem;
+  }
+
+  #map {
+    height: 22rem;
+    width: 23rem;
+    border-radius: 2rem;
+    margin-bottom: 50px;
+    margin-top: -2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para dispositivos com largura de tela de 768px a 1023px (geralmente tablets em modo retrato) */
+
+  body {
+    margin: auto;
+  }
+}
+
+
+/* Estilos para dispositivos móveis em modo paisagem */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  /* Estilos que serão aplicados quando o dispositivo estiver em modo paisagem */
+  /* body {
+    margin: auto;
+  } */
+
+  /* main {
+    display: flex;
+    align-items: center;
+  } */
+
+  #map {
+    height: 22rem;
+    width: 25rem;
+    border-radius: 2rem;
+    margin-bottom: 50px;
+    margin-top: -2rem;
+  }
 }
