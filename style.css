@@ -21,7 +21,7 @@ body {
 
   height: 100% !important;
   margin: 0;
-  padding: 0;
+  padding: 3rem 0 3rem 0;
 
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -38,12 +38,19 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 10px; /* width of the entire scrollbar */ /* height: 10px; */
+  width: 10px; /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
-  /*background: orange;         color of the tracking area */
+/* Altura */
+body::-webkit-scrollbar-thumb {
+  height: 10px; /* Altura da alça da barra de rolagem */
 }
+
+/* 
+
+body::-webkit-scrollbar-track {
+  /*background: orange;         color of the tracking area 
+} */
 
 body::-webkit-scrollbar-thumb {
   background-color: #6800ca; /* color of the scroll thumb */
@@ -51,13 +58,13 @@ body::-webkit-scrollbar-thumb {
   /* border: 3px solid orange;  creates padding around scroll thumb */
 }
 
-h1,
-h2 {
+.titulo,
+.subtitulo {
   color: #6800ca;
 }
 
-h1 {
-  font-size: 10rem;
+.titulo {
+  font-size: 5rem;
   font-family: monospace;
   width: 9ch;
   border-right: 1rem solid;
@@ -78,7 +85,7 @@ h1 {
   }
 }
 
-h2 {
+.subtitulo {
   width: 18ch;
   font-size: 1.5rem;
   overflow: hidden;
@@ -91,6 +98,7 @@ h2 {
 }
 
 .content {
+  max-width: 100vw;
   margin-left: 5rem;
   display: flex;
   flex-direction: column;
@@ -130,8 +138,7 @@ h2 {
   margin-right: 15%;
 }
 
-.popup,
-.popup-botao-copiar {
+.popup {
   display: none;
   position: absolute;
   background-color: #40004d;
@@ -153,17 +160,17 @@ h2 {
   height: 2.5rem;
 }
 
-#pai {
+#elemento-pai {
   border-radius: 15px;
+  margin: 3rem 0rem 2rem 0rem;
+  background: #212121;
+  /* box-shadow: 5px 5px 8px #1b1b1b, -5px -5px 8px #272727; */
   background-color: #181818;
-  padding: 2rem 0rem 2rem 0px;
-  /* position: relative;
-  top: 26rem; */
+  padding: 2rem 0rem 2rem 4rem;
 
   animation: fadeInAnimation ease 7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  /* font-size: px; */
 }
 
 .titulo-subtitulo {
@@ -171,14 +178,7 @@ h2 {
   flex-direction: column;
   /* align-items: center; */
   padding-bottom: 5%;
-}
-
-.areaInputsGeral {
-  height: 30%;
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
-  padding-left: 3rem;
+  align-content: center;
 }
 
 .subgrupo {
@@ -189,6 +189,8 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2%;
+  /* background: #212121;
+  box-shadow: 5px 5px 8px #1b*/
   background-color: #181818;
   border-radius: 1rem;
   height: 7rem;
@@ -200,7 +202,7 @@ h2 {
 }
 
 #area-cep,
-#pai {
+#elemento-pai {
   width: 55rem;
 }
 
@@ -253,30 +255,11 @@ h2 {
   margin: 5%;
 }
 
-/* #estado {
-  position: absolute;
-  left: 3.5rem;
-} */
-
-#cidade {
-  width: 18.5rem;
-}
-
 .areaInput {
   padding: 15px 0 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.areaInputsGeral input {
-  border-radius: 6px;
-  padding-left: 5%;
-}
-
-#bairro-div,
-#estado {
-  padding-left: 25%;
 }
 
 input {
@@ -289,6 +272,7 @@ input {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   font-weight: bold;
+  padding: 0 0 0 1rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -364,5 +348,105 @@ input:-ms-input-placeholder {
   100% {
     opacity: 0%;
     display: none;
+  }
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 767px) {
+  /* Estilos para dispositivos com largura de tela de até 767px (geralmente dispositivos móveis em modo retrato) */
+  body {
+    background-image: none;
+    background-size: cover;
+    padding: 10rem 0 0 0;
+    margin: auto;
+    /* background-image: url(images/background.png); */
+    background-color: #0d1116;
+    /* max-height: 100vh; */
+  }
+
+  .content {
+    padding: 5rem 1rem 0 1rem;
+    margin-left: 0%;
+    max-width: 100vw;
+  }
+
+  .titulo-subtitulo {
+    padding-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+    align-content: center;
+  }
+
+  #area-cep.areaInput {
+    display: flex;
+    flex-direction: column;
+    width: 27rem;
+    height: 15rem;
+    align-items: baseline;
+    align-items: center;
+    /* padding-left: 5%; */
+  }
+
+  #cep {
+    width: 20rem;
+  }
+
+  #botao-pesquisacep {
+    width: 22rem;
+    width: 22rem;
+    margin: 1rem 0rem 1rem 0rem;
+  }
+
+  .botao-copia {
+    background-color: transparent;
+    border: thin;
+    margin-right: 2rem;
+  }
+
+  #elemento-pai {
+    width: 27rem;
+    padding: 2rem 0 2rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  input,
+  #cep {
+    height: 3.5rem;
+  }
+
+  #aviso-sucesso{
+    display: block;
+    position: relative;
+    top: -4rem;
+  }
+}
+
+/* Estilos para dispositivos móveis em modo paisagem */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  /* Estilos que serão aplicados quando o dispositivo estiver em modo paisagem */
+  body {
+    margin: auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Estilos para dispositivos com largura de tela de 768px a 1023px (geralmente tablets em modo retrato) */
+  body {
+    margin: auto;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
   }
 }
