@@ -8,6 +8,9 @@ As tecnologias de terceiros utilizadas foram a ViaCEP, um webservice para a cons
 Código de Endereçamento Postal, a Maps Platform, a API do Google Mapas, e a livraria 
 places, também do Google Mapas. 
 
+- [GetCEP() - Site🔗](afonsedev.github.io/getcep.github.io/)
+
+
 
 ## Funcionalidades
 
