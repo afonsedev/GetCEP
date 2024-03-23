@@ -420,7 +420,6 @@ input:-ms-input-placeholder {
   }
 
   #aviso-sucesso{
-    display: block;
     position: relative;
     top: -4rem;
   }
