@@ -46,6 +46,13 @@ body::-webkit-scrollbar-thumb {
   height: 10px; /* Altura da alça da barra de rolagem */
 }
 
+.areacima{
+  padding-bottom: 2rem;
+}
+
+.card-aviso, #elemento-pai{
+  box-shadow: 29px 8px 43px 54px rgba(0,0,0,0.3);
+}
 /* 
 
 body::-webkit-scrollbar-track {
@@ -96,6 +103,26 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
   font-size: 20px;
 }
+
+.card-aviso{
+    width: 20rem;
+    height: 10rem;
+    background: linear-gradient(145deg, #1e1e1e, #232323);
+    border-radius: 5px;
+    position: relative;
+    left: 5rem;
+
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.card-aviso a{
+  color: rgb(131, 188, 241);
+}
+
+.areacima{
+  display: flex;
+}
+
 
 .content {
   max-width: 100vw;
@@ -358,11 +385,15 @@ input:-ms-input-placeholder {
   body {
     background-image: none;
     background-size: cover;
-    padding: 10rem 0 0 0;
+    padding: 10rem 1rem 0px 1rem;    
     margin: auto;
     /* background-image: url(images/background.png); */
     background-color: #0d1116;
     /* max-height: 100vh; */
+  }
+
+  .card-aviso{
+    display: none;
   }
 
   .content {
@@ -419,7 +450,7 @@ input:-ms-input-placeholder {
     height: 3.5rem;
   }
 
-  #aviso-sucesso{
+  #aviso-sucesso {
     position: relative;
     top: -4rem;
   }
@@ -430,6 +461,10 @@ input:-ms-input-placeholder {
   /* Estilos que serão aplicados quando o dispositivo estiver em modo paisagem */
   body {
     margin: auto;
+  }
+
+  .card-aviso{
+    display: none;
   }
 
   .content {
@@ -447,5 +482,10 @@ input:-ms-input-placeholder {
   .content {
     display: flex;
     align-items: center;
+  }
+
+
+  .card-aviso{
+    display: none;
   }
 }
